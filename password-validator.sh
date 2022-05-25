@@ -57,46 +57,34 @@ function checkPass {
                 if [[ $U_CASE -eq 0 ]]; then
                         echo -e "${RED}  -Password must contain a CAPITAL case character${NC}"
                 fi 
-                (exit 1)
+                exit 1
             else
                 i=${#PASS}
                 echo -e "${GREEN}Password${NC} "$PASS" ${GREEN}PASSED validation${NC}"
-                (exit 0)
+                exit 0
             fi
         done
     else   
         echo -e "${RED}Password${NC} "$PASS" ${RED}FAILED validation:${NC}"
         echo -e "  ${RED}-Password must be 10 or more characters long${NC}"
-        (exit 1)
+        exit 1
     fi
 }
 
-#!/bin/bash
-
-while getopts ':ab:c:' OPTION; do
+while getopts ':f:' OPTION; do
 
   case "$OPTION" in
-    a)
-      echo "Option a used"
-      ;;
-
-    b)
-      argB="$OPTARG"
-      echo "Option b used with: $argB"
-      ;;
-
-    c)
-      argC="$OPTARG"
-      echo "Option c used with: $argC"
+    f)
+      argF="$OPTARG"
       ;;
 
     ?)
-      echo "Usage: $(basename $0) [-a] [-b argument] [-c argument]"
+      echo "Usage: $(basename $0) [-f argument]"
       exit 1
       ;;
   esac
 
 done
 
-echo "Variable one is: $1"
-
+PASS=$(< $argF)
+checkPass "$PASS"
