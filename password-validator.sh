@@ -129,4 +129,4 @@ function checkPass {
     fi
 }
 
-    checkPass "$1"
+checkPass "$1"
