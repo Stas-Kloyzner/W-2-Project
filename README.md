@@ -3,9 +3,9 @@
 
 Checks if a given password is longer than set length ,and contains numbers and alphabet characters ,both lower case and capital.
  
- -If paasword failed validation, display message expalining why,colored red, and exit code 1.
+ -If password failed validation, display message expalining why it failed, colored red.
  
- -If paasword passed validation, display message that password passed,colored green, and exit code 0.
+ -If password passed validation, display message that password passed, colored green.
  
  
  
@@ -18,7 +18,7 @@ example:
  
  
  
- -can read password from file if "-f" used before passing a file in second argument.
+ -can read password from file if -f used before passing a file in second argument.
 
 example: 
 
