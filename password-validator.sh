@@ -129,9 +129,14 @@ function checkPass {
     fi
 }
 
-
+# the "feature" - if first argument passe is "-f" , then validate the pass for file specified in second argument passed.
+# example: <./password-validator.sh> <-f> <"./password.txt">
 if [ $1 == "-f" ]; then
-    checkPass "$(< $2)"
+    if [ -z $2 ]; then # If file wasn't passed in the second argument 
+        echo -e "\033[0;31mYou didnt pass a file to read from\033[0m"
+    else
+        checkPass "$(< $2)"
+    fi
 else
     checkPass "$1"
 fi
