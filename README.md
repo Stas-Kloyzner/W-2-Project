@@ -7,13 +7,22 @@ Checks if a given password is longer than set length ,and contains numbers and a
  
  -If paasword passed validation, display message that password passed,colored green, and exit code 0.
  
-use example: 
+ 
+ 
+example: 
+
  
  PS> ./password-validator.ps1 "MyP@ssw0rd!"
+ 
  Password has PASSED validation.
  
-can read password from file if "-f" used before passing a file in second argument.
-use example: 
+ 
+ 
+ -can read password from file if "-f" used before passing a file in second argument.
+
+example: 
+
  
  PS> ./password-validator.ps1 -f "./password.txt"
+ 
  Password has PASSED validation.
