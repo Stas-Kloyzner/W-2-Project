@@ -136,7 +136,6 @@ function validate {
 #   A file (./file.txt) if the first argument was -f.
 # Outputs:
 #   If input arguments were incorrect, prints message (colord red) specifying the problem.
-# USAGE: ./password-validator.sh -f "./password.txt"
 #======================================
 function startValidate {
 
