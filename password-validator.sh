@@ -2,6 +2,10 @@
 # Author: Stanislav Kloyzner
 # 
 # Checks if a given password is longer than set length and contains numbers and alphabet characters both lower case and capital.
+# use example: ./password-validator.sh "MyP@ssw0rd!"
+#
+# can read password from file if "-f" used before passing a file in second argument.
+# use example: ./password-validator.sh -f "./password.txt"
 
 
 #######################################
